@@ -25,7 +25,8 @@ function handleSubmit(e) {
     let articleUrl = document.getElementById('article-url').value
 
     if(Client.checkURL(articleUrl)) {
-
+    
+        console.log("::: Form Submitted :::")
     post('http://localhost:8081/Api', {url: articleUrl})
 
     .then(function(res) {
